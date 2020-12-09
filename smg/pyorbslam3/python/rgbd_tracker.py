@@ -2,7 +2,7 @@ import numpy as np
 import threading
 
 import smg.pyopencv as pyopencv
-import smg.pyorbslam2 as pyorbslam2
+import smg.pyorbslam3 as pyorbslam3
 
 from typing import Optional
 
@@ -114,8 +114,8 @@ class RGBDTracker:
         Process tracking requests on a separate thread.
         """
         # Initialise ORB-SLAM.
-        system: pyorbslam2.System = pyorbslam2.System(
-            self.__voc_file, self.__settings_file, pyorbslam2.RGBD, self.__use_viewer
+        system: pyorbslam3.System = pyorbslam3.System(
+            self.__voc_file, self.__settings_file, pyorbslam3.RGBD, self.__use_viewer
         )
 
         # Allocate suitably-sized OpenCV images that can be passed to C++.

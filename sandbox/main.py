@@ -1,15 +1,15 @@
 import cv2
 import numpy as np
 
-import smg.pyorbslam2 as pyorbslam2
+import smg.pyorbslam3 as pyorbslam3
 
 
 def main():
     np.set_printoptions(suppress=True)
 
-    with pyorbslam2.RGBDTracker(
-        settings_file="D:/datasets/kitti_raw/2011_09_26/2011_09_26_drive_0005_sync/orb_slam/settings.yaml",
-        use_viewer=True, voc_file="C:/orbslam2/Vocabulary/ORBvoc.txt", wait_till_ready=True
+    with pyorbslam3.RGBDTracker(
+        settings_file="settings-temp.yaml",
+        use_viewer=True, voc_file="C:/orbslam3/Vocabulary/ORBvoc.txt", wait_till_ready=True
     ) as tracker:
         for idx in range(100):
             colour_image: np.ndarray = cv2.imread(
