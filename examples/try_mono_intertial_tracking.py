@@ -6,12 +6,7 @@ def main():
     imu_points: IMUPoints = IMUPoints()
     imu_points.append(imu_point)
     imu_points.append(imu_point)
-    print(len(imu_points))
-    temp(imu_points)
-    print(len(imu_points))
-    print(list(imu_points))
     print(imu_points)
-    temp(imu_points)
 
 
 if __name__ == "__main__":
