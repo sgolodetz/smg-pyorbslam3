@@ -5,7 +5,7 @@
 TARGET_LINK_LIBRARIES(${targetname} ${OpenCV_LIBS})
 
 IF(MSVC_IDE)
-  FILE(GLOB RUNTIMELIBS "${OpenCV_DIR}/bin/Debug/*.dll" "${OpenCV_DIR}/bin/Release/*.dll")
+  FILE(GLOB RUNTIMELIBS "${_OpenCV_LIB_PATH}/*.dll")
 ENDIF()
 
 FOREACH(RUNTIMELIB ${RUNTIMELIBS})
