@@ -8,7 +8,7 @@ def main():
     np.set_printoptions(suppress=True)
 
     with pyorbslam3.RGBDTracker(
-        settings_file="settings-temp.yaml",
+        settings_file="settings-kitti.yaml",
         use_viewer=True, voc_file="C:/orbslam3/Vocabulary/ORBvoc.txt", wait_till_ready=True
     ) as tracker:
         for idx in range(100):

@@ -1,4 +1,4 @@
-from smg.pyorbslam3 import *
+from smg.pyorbslam3 import IMUPoint, IMUPoints
 
 
 def main():
