@@ -2,7 +2,7 @@
 # UseOpenNI.cmake #
 ###################
 
-IF(MSVC_IDE)
+IF(WIN32)
   FIND_PATH(OPENNI_ROOT LICENSE HINTS "C:/Program Files/OpenNI2")
 ELSEIF(APPLE)
   FIND_PATH(OPENNI_ROOT primesense-usb.rules HINTS ~/Downloads/OpenNI-MacOSX-x64-2.2)
